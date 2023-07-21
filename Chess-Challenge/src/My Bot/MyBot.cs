@@ -39,10 +39,11 @@ public class MyBot : IChessBot
                 // Check if possible
                 if (MoveIsCheck(board, move, false)) UpdateBestNext(move, 1000);
 
-                // Rule 3
                 // Capture if possible
                 PieceType capture = move.CapturePieceType;
                 if (capture > 0) UpdateBestNext(move, pieceValues[(int)capture]);
+
+                
             }
         }
 
